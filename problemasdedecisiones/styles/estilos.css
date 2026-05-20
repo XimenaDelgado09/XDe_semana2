@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: linear-gradient(135deg, #fff1f2, #fdf2f8, #faf5ff);
+    min-height:100vh;
+    padding:40px;
+    font-family:'Poppins', sans-serif;
+}
+
+/* TITULO */
+
+h1{
+    text-align:center;
+    margin-bottom:45px;
+
+    font-family:'Playfair Display', serif;
+    font-size:52px;
+    font-weight:700;
+
+    color:#9d174d;
+
+    letter-spacing:1px;
+    text-shadow:2px 2px 8px rgba(0,0,0,0.08);
+}
+
+/* CONTENEDOR */
+
+.contenedor{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(290px,1fr));
+    gap:30px;
+}
+
+/* CAJAS */
+
+.caja{
+    background:rgba(255,255,255,0.75);
+
+    border:1px solid rgba(255,255,255,0.4);
+
+    backdrop-filter: blur(10px);
+
+    border-radius:28px;
+    padding:28px;
+
+    box-shadow:
+    0 10px 25px rgba(236,72,153,0.12),
+    0 4px 10px rgba(0,0,0,0.05);
+
+    transition:0.35s;
+
+    position:relative;
+    overflow:hidden;
+}
+
+/* EFECTO BRILLO */
+
+.caja::before{
+    content:"";
+    position:absolute;
+
+    top:-60px;
+    right:-60px;
+
+    width:140px;
+    height:140px;
+
+    background:rgba(255,255,255,0.4);
+
+    border-radius:50%;
+}
+
+/* HOVER */
+
+.caja:hover{
+    transform:translateY(-8px) scale(1.02);
+
+    box-shadow:
+    0 18px 35px rgba(236,72,153,0.18),
+    0 8px 15px rgba(0,0,0,0.08);
+}
+
+/* TITULOS DE CAJAS */
+
+.caja h2{
+    font-family:'Playfair Display', serif;
+
+    color:#be185d;
+
+    margin-bottom:16px;
+
+    font-size:30px;
+    font-weight:600;
+}
+
+/* TEXTO */
+
+.caja p{
+    color:#5b5563;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+    font-size:15px;
+    font-weight:400;
+}
+
+/* BOTONES */
+
+.caja button{
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+    border-radius:14px;
+
+    background:linear-gradient(to right, #f472b6, #ec4899);
+
+    color:white;
+
+    font-family:'Poppins', sans-serif;
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    box-shadow:0 5px 12px rgba(236,72,153,0.25);
+}
+
+.caja button:hover{
+    transform:scale(1.03);
+
+    background:linear-gradient(to right, #ec4899, #db2777);
+
+    box-shadow:0 8px 18px rgba(236,72,153,0.35);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:600px){
+
+    body{
+        padding:20px;
+    }
+
+    h1{
+        font-size:38px;
+    }
+
+}
+/* Fondo de la página */
+body{
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Cuadro del formulario */
+.formulario{
+    width: 350px;
+    margin: 100px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px gray;
+    text-align: center;
+}
+
+/* Título */
+.formulario h1{
+    margin-bottom: 20px;
+}
+
+/* Etiquetas */
+.formulario label{
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Caja de texto */
+.formulario input{
+    width: 90%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* Botón */
+.formulario button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ef9ad4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Resultado */
+#resultado{
+    margin-top: 20px;
+    font-weight: bold;
+}
+.icono{
+    width:200px;
+    height:200px;
+
+    object-fit:contain;
+
+    display:block;
+    margin:0 auto 20px auto;
+}
